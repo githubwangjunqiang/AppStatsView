@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/app_state_layout_error_view_ivimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/app_state_view_error" />
+
+    <TextView
+        android:id="@+id/app_state_layout_error_view_tvmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="37dp"
+        android:paddingBottom="12dp"
+        android:text="呃，加载失败～"
+        android:textColor="#999999"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="点击屏幕重新加载"
+        android:textColor="#ff69c1ff"
+        android:textSize="12dp" />
+
+</LinearLayout>

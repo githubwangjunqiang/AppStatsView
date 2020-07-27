@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <android.support.design.chip.ChipGroup
+        android:id="@+id/chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:checkedChip="@+id/chip_content"
+        app:chipSpacing="10dp"
+        app:singleSelection="true">
+
+        <android.support.design.chip.Chip
+            android:id="@+id/chip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="正常视图"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text"
+            app:chipBackgroundColor="#ffffff"
+            app:chipStrokeColor="@color/colorAccent"
+            app:chipStrokeWidth="1dp"
+            app:rippleColor="@color/colorAccent" />
+
+        <android.support.design.chip.Chip
+            android:id="@+id/chip_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="失败视图"
+            android:textColor="@color/color_text"
+            app:chipBackgroundColor="#ffffff"
+            app:chipStrokeColor="@color/colorAccent"
+            app:chipStrokeWidth="1dp"
+            app:rippleColor="@color/colorAccent" />
+
+        <android.support.design.chip.Chip
+            android:id="@+id/chip_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="空视图"
+            android:textColor="@color/color_text"
+            app:chipBackgroundColor="#ffffff"
+            app:chipStrokeColor="@color/colorAccent"
+            app:chipStrokeWidth="1dp"
+            app:rippleColor="@color/colorAccent" />
+
+        <android.support.design.chip.Chip
+            android:id="@+id/chip_net_work_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="网络异常"
+            android:textColor="@color/color_text"
+            app:chipBackgroundColor="#ffffff"
+            app:chipStrokeColor="@color/colorAccent"
+            app:chipStrokeWidth="1dp"
+            app:rippleColor="@color/colorAccent" />
+
+        <android.support.design.chip.Chip
+            android:id="@+id/chip_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="加载中"
+            android:textColor="@color/color_text"
+            app:chipBackgroundColor="#ffffff"
+            app:chipStrokeColor="@color/colorAccent"
+            app:chipStrokeWidth="1dp"
+            app:rippleColor="@color/colorAccent" />
+
+    </android.support.design.chip.ChipGroup>
+
+
+    <com.xiaoqiang.appstateview.StateLayout
+        android:id="@+id/app_statlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="我是正常视图" />
+    </com.xiaoqiang.appstateview.StateLayout>
+
+</LinearLayout>
