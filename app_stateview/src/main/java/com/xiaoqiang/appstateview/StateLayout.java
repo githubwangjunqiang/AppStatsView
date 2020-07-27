@@ -2,9 +2,6 @@ package com.xiaoqiang.appstateview;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,15 +70,15 @@ public class StateLayout extends FrameLayout implements IStateLayout {
      */
     private OnStateLayoutChangeListener mOnStateLayoutChangeListener;
 
-    public StateLayout(@NonNull Context context) {
+    public StateLayout(Context context) {
         this(context, null);
     }
 
-    public StateLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public StateLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public StateLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public StateLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context, attrs);
     }
@@ -136,7 +133,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
             mContentView = generateContentView();
         }
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mContentView);
-        if(mOnStateLayoutChangeListener != null){
+        if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
         }
     }
@@ -155,7 +152,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
         }
         LayoutHelper.setData(msg, DEFAULT_DRAWABLE_ID, mLoadView);
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mLoadView);
-        if(mOnStateLayoutChangeListener != null){
+        if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
         }
     }
@@ -180,7 +177,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
         }
         LayoutHelper.setData(msg, drawableId, mErrorView);
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mErrorView);
-        if(mOnStateLayoutChangeListener != null){
+        if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
         }
     }
@@ -205,7 +202,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
         }
         LayoutHelper.setData(msg, DEFAULT_DRAWABLE_ID, mNetWorkErrorView);
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mNetWorkErrorView);
-        if(mOnStateLayoutChangeListener != null){
+        if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
         }
     }
@@ -230,7 +227,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
         }
         LayoutHelper.setData(msg, DEFAULT_DRAWABLE_ID, mEmptyView);
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mEmptyView);
-        if(mOnStateLayoutChangeListener != null){
+        if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
         }
     }
@@ -253,11 +250,6 @@ public class StateLayout extends FrameLayout implements IStateLayout {
         return null;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public StateLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        initView(context, attrs);
-    }
 
     public void setOnStateLayoutChangeListener(OnStateLayoutChangeListener onStateLayoutChangeListener) {
         mOnStateLayoutChangeListener = onStateLayoutChangeListener;
