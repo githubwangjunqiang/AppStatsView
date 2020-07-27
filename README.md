@@ -10,6 +10,10 @@
 
 
 ![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/content.jpg)
+![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/empty.jpg)
+![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/error.jpg)
+![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/loading.jpg)
+![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/networkerror.jpg)
 
 此库的优点：
 
