@@ -28,7 +28,22 @@
 加载无网络视图到内存中！！！
 
 
-使用方法
+使用方法  在项目build.gradle 文件中添加
+            allprojects {
+            		repositories {
+            			...
+            			maven { url 'https://jitpack.io' }
+            		}
+            	}
+
+
+           在app 的build.fradle文件中添加
+
+           dependencies {
+           	        implementation 'com.github.githubwangjunqiang:AppStatsView:Tag'
+           	}
+
+           	并重新编译！！！
 
 xml布局中 嵌入 StateLayout
 
