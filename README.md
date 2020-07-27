@@ -28,7 +28,8 @@
 加载无网络视图到内存中！！！
 
 
-使用方法  在项目build.gradle 文件中添加
+使用方法  在项目build.gradle 文件中添加、
+
             allprojects {
             		repositories {
             			...
