@@ -8,6 +8,9 @@
 做到最佳，经过一些时间的开发和调试终于上线了 状态试图 layout 并且在我司项目中使用了一年之久，并没有因为此库而产生的崩溃和性能下降；
 同志们放心使用！！！
 
+
+![image](https://github.com/githubwangjunqiang/AppStatsView/img/content.webp)
+
 此库的优点：
 
 1、侵入性小，调用简单，继承自系统布局 FrameLayout，并未修改系统逻辑，只要在需要多状态显示的地方，用 StateLayout 当作父布局即可，
