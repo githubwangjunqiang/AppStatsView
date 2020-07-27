@@ -26,3 +26,65 @@
 因为 除了默认的contentView 视图布局，其他的视图布局都是按需加载的，并不是在您项目初始化的时候会添加5套布局在里面，都是
 使用按需加载的方式显示状态视图的，所以您不会感到卡顿的原因在这里，比如您如果不调用 无网络视图的话 StateLayout永远不会
 加载无网络视图到内存中！！！
+
+
+使用方法
+
+xml布局中 嵌入 StateLayout
+
+
+    <com.xiaoqiang.appstateview.StateLayout
+        android:id="@+id/app_statlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="我是正常视图" />
+    </com.xiaoqiang.appstateview.StateLayout>
+
+
+代码中 更改状态
+
+    //初始化
+    Statlayout Statlayout = findViewById(R.id.app_statlayout)
+
+    //显示 正常视图
+    Statlayout.showContentView();
+    //显示 失败视图
+    Statlayout.showErrorView();
+    //显示 空视图
+    Statlayout.showEmptyView();
+    //显示 网络异常视图
+    Statlayout.showNetWorkErrorView();
+    //显示 加载中视图
+    Statlayout.showLoadingView();
+
+
+    监听：
+        Statlayout.setOnClickStateListener(new OnClickStateListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //当点击 重试按钮时 会回调此方法
+                    }
+                });
+
+        Statlayout.setOnStateLayoutChangeListener(new OnStateLayoutChangeListener() {
+                    @Override
+                    public void onChange(boolean isContentView) {
+                        // 状态改变了   isContentView-》当前状态是否是 正常视图
+                    }
+                });
+
+          //当前状态图 是否时 正常视图在展示
+         boolean contentView = mMainBinding.appStatlayout.isContentView();
+
+
+
+注意：此库继承自 FrameLayout 如果您开启了混淆 只要不要混淆 继承自 FrameLayout 的类即可；
+默认您的混淆文件已经拥有了此能力，您可不必添加任何规则，此库会正常运行
+
+此库目前使用了   下面的注解系统库 如果您是androidX 默认也不会有任何影响的 as会帮您完成转包操作，如果有问题请您联系我
+980766134@qq.com,近期我会再出一般 androidX 的库
+implementation 'com.android.support:support-annotations:28.0.0'
