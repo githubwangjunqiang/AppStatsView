@@ -41,7 +41,7 @@
            在app 的build.fradle文件中添加
 
            dependencies {
-           	        implementation 'com.github.githubwangjunqiang:AppStatsView:Tag'
+           	        implementation 'com.github.githubwangjunqiang:AppStatsView:v1.3'
            	}
 
            	并重新编译！！！
