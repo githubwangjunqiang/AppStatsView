@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.xiaoqiang.appstateview.OnClickStateListener;
+import com.xiaoqiang.appstateview.OnStateLayoutChangeListener;
 import com.xiaoqiang.appstateview.StateLayout;
 import com.xiaoqiang.appstatsview.databinding.ActivityMainBinding;
 
@@ -41,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        mMainBinding.appStatlayout.setOnClickStateListener(new OnClickStateListener() {
+            @Override
+            public void onClick(View v) {
+                //当点击 重试按钮时 会回调此方法
+            }
+        });
+        mMainBinding.appStatlayout.setOnStateLayoutChangeListener(new OnStateLayoutChangeListener() {
+            @Override
+            public void onChange(boolean isContentView) {
+                // 状态改变了   isContentView-》当前状态是否是 正常视图
+            }
+        });
+        //当前状态图 是否时 正常视图在展示
+        boolean contentView = mMainBinding.appStatlayout.isContentView();
     }
 
     /**
