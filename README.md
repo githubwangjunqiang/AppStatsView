@@ -9,7 +9,7 @@
 同志们放心使用！！！
 
 
-![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/content.webp)
+![image](https://github.com/githubwangjunqiang/AppStatsView/blob/master/img/content.jpg)
 
 此库的优点：
 
