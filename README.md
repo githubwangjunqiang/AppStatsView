@@ -85,6 +85,3 @@ xml布局中 嵌入 StateLayout
 注意：此库继承自 FrameLayout 如果您开启了混淆 只要不要混淆 继承自 FrameLayout 的类即可；
 默认您的混淆文件已经拥有了此能力，您可不必添加任何规则，此库会正常运行
 
-此库目前使用了   下面的注解系统库 如果您是androidX 默认也不会有任何影响的 as会帮您完成转包操作，如果有问题请您联系我
-980766134@qq.com,近期我会再出一般 androidX 的库
-implementation 'com.android.support:support-annotations:28.0.0'
