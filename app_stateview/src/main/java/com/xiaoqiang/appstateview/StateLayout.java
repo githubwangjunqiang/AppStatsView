@@ -226,6 +226,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
             LayoutHelper.setTagHolder(mEmptyView);
         }
         LayoutHelper.setData(msg, DEFAULT_DRAWABLE_ID, mEmptyView);
+
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mEmptyView);
         if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
