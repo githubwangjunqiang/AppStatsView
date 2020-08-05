@@ -1,4 +1,4 @@
-package com.xiaoqiang.appstateview.holder;
+package com.xiaoqiang.appstateview;
 
 import android.text.TextUtils;
 import android.view.View;
@@ -13,7 +13,7 @@ import com.xiaoqiang.appstateview.StateLayout;
  * @email: 15075818555@163.com
  * @data: on 2020/3/17 17:20
  */
-public class BaseHolder {
+ class BaseHolder {
 
     public ImageView mImageView;
     public TextView mTextView;

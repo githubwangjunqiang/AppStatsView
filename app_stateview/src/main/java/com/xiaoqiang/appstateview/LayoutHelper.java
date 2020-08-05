@@ -1,11 +1,8 @@
-package com.xiaoqiang.appstateview.helper;
+package com.xiaoqiang.appstateview;
 
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
-
-import com.xiaoqiang.appstateview.IStateLayout;
-import com.xiaoqiang.appstateview.holder.BaseHolder;
 
 
 /**
@@ -13,7 +10,7 @@ import com.xiaoqiang.appstateview.holder.BaseHolder;
  * @email: 15075818555@163.com
  * @data: on 2020/3/17 13:41
  */
-public class LayoutHelper {
+class LayoutHelper {
     /**
      * 通过 viewstub 找到view 并添加进 父布局文件中
      *
@@ -92,14 +89,14 @@ public class LayoutHelper {
     /**
      * 设置 holder 的tag
      *
-     * @param errorView
+     * @param tagView
      */
-    public static void setTagHolder(View errorView) {
-        if (null == errorView) {
+    public static void setTagHolder(View tagView) {
+        if (null == tagView) {
             return;
         }
-        BaseHolder holder = new BaseHolder(errorView);
-        errorView.setTag(holder);
+        BaseHolder holder = new BaseHolder(tagView);
+        tagView.setTag(holder);
     }
 
     /**

@@ -1,14 +1,11 @@
 package com.xiaoqiang.appstateview;
 
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.widget.FrameLayout;
-
-import com.xiaoqiang.appstateview.helper.LayoutHelper;
 
 /**
  * 状态试图布局  注意一点  在xml里面 包裹的第一个布局 默认指定为 contentView 即为正常试图
