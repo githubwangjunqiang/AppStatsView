@@ -27,7 +27,17 @@ android {
 //            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 //        }
     }
-
+    android.libraryVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            def date = new Date()
+            if (outputFileName.endsWith('.aar')) {
+                def formattedDate = date.format('yyyy.MM.dd-HH.mm.ss')
+                fileName = "AppStatsView_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.buildType.name}_${formattedDate}.aar"
+                outputFileName = fileName
+            }
+        }
+    }
 }
 
 dependencies {
