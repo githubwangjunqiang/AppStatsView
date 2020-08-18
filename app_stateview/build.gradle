@@ -8,8 +8,10 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     sourceSets {
         main {
+//            manifest.srcFile 'src/main/module/AndroidManifest.xml'
             res.srcDirs = [resDir]
 
 //            if (channel.classesTaskName.endsWith("iMoney")) {
@@ -47,6 +49,7 @@ android {
                 fileName = name + "-AppStatsView_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.buildType.name}_${formattedDate}.aar"
                 outputFileName = fileName
             }
+            println("outputFile:"+outputFile)
         }
     }
 
