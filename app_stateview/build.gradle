@@ -8,6 +8,19 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    sourceSets {
+        main {
+            res.srcDirs = [resDir]
+
+//            if (channel.classesTaskName.endsWith("iMoney")) {
+////                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+//                res.srcDirs = ['src/main/res/res-imoney']
+//            } else if (buildType.classesTaskName.endsWith("quzan")) {
+////                manifest.srcFile 'src/main/AndroidManifest.xml'
+//                res.srcDirs = ['src/main/res/res-quzan']
+//            }
+        }
+    }
 
     buildTypes {
         release {
@@ -18,26 +31,25 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-//        debugtest {
-//            minifyEnabled false
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//        }
-//        releasetest {
-//            minifyEnabled false
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//        }
+
     }
     android.libraryVariants.all { variant ->
         variant.outputs.all {
             def fileName
             def date = new Date()
+            String name
+            String[] strings = resDir.toString().split("-")
+            if (strings != null && strings.length > 0) {
+                name = strings[1]
+            }
             if (outputFileName.endsWith('.aar')) {
                 def formattedDate = date.format('yyyy.MM.dd-HH.mm.ss')
-                fileName = "AppStatsView_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.buildType.name}_${formattedDate}.aar"
+                fileName = name + "-AppStatsView_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.buildType.name}_${formattedDate}.aar"
                 outputFileName = fileName
             }
         }
     }
+
 }
 
 dependencies {

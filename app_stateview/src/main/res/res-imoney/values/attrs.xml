@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="LoadProgress">
+        <attr name="load_color" format="color" />
+        <attr name="load_paint_width" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

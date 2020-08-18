@@ -1,5 +1,11 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    ext {
+        resDirMap = [
+                iMoney: 'src/main/res/res-imoney',
+                quzan : 'src/main/res/res-quzan'
+        ]
+        resDir = resDirMap.iMoney
+    }
     repositories {
         google()
         jcenter()
