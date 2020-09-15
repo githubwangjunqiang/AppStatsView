@@ -114,4 +114,21 @@ class LayoutHelper {
         }
 
     }
+
+    /**
+     * 移除指定view
+     *
+     * @param customizeView
+     */
+    public static void removeView(View customizeView) {
+
+        if (customizeView == null) {
+            return;
+        }
+
+        if (customizeView.getParent() != null) {
+            ((ViewGroup) customizeView.getParent()).removeView(customizeView);
+        }
+        customizeView = null;
+    }
 }

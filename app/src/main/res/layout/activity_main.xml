@@ -77,6 +77,18 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
+        <android.support.design.chip.Chip
+            android:id="@+id/chip_zidyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="自定义"
+            android:textColor="@color/color_text"
+            app:chipBackgroundColor="#ffffff"
+            app:chipStrokeColor="@color/colorAccent"
+            app:chipStrokeWidth="1dp"
+            app:rippleColor="@color/colorAccent" />
+
     </android.support.design.chip.ChipGroup>
 
 

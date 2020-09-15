@@ -49,6 +49,10 @@ public class StateLayout extends FrameLayout implements IStateLayout {
      * 空试图
      */
     private View mEmptyView;
+    /**
+     * 自定义 视图
+     */
+    private View mCustomizeView;
 
 
     //    **********************************************************************
@@ -229,6 +233,26 @@ public class StateLayout extends FrameLayout implements IStateLayout {
             mOnStateLayoutChangeListener.onChange(isContentView());
         }
     }
+
+    @Override
+    public void showCustomView(View view) {
+        if (view == null) {
+            return;
+        }
+        if (view != mCustomizeView) {
+            LayoutHelper.removeView(mCustomizeView);
+            LayoutHelper.removeView(view);
+            mCustomizeView = view;
+        }
+        if (mCustomizeView.getParent() == null) {
+            LayoutHelper.addView(this, view);
+        }
+        mCurrentView = LayoutHelper.changeViewState(mCurrentView, mCustomizeView);
+        if (mOnStateLayoutChangeListener != null) {
+            mOnStateLayoutChangeListener.onChange(isContentView());
+        }
+    }
+
 
     /**
      * 检测 view

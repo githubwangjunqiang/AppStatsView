@@ -122,4 +122,11 @@ public interface IStateLayout {
      * @param drawableId
      */
     void showEmptyView(String msg, int drawableId);
+
+    /**
+     * 显示自定义 view
+     *
+     * @param view
+     */
+    void showCustomView(View view);
 }

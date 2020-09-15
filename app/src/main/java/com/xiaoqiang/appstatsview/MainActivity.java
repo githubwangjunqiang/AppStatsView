@@ -4,6 +4,7 @@ import android.support.design.chip.ChipGroup;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.xiaoqiang.appstateview.OnClickStateListener;
 import com.xiaoqiang.appstateview.OnStateLayoutChangeListener;
@@ -13,6 +14,7 @@ import com.xiaoqiang.appstatsview.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mMainBinding;
+    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.chip_loading:
                         loadingView(null);
                         break;
+                    case R.id.chip_zidyi:
+                        zidingyi(null);
+                        break;
                     default:
                         break;
                 }
@@ -57,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
         });
         //当前状态图 是否时 正常视图在展示
         boolean contentView = mMainBinding.appStatlayout.isContentView();
+
+
+        view = new FrameLayout(this);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentView(null);
+            }
+        });
     }
 
     /**
@@ -102,5 +116,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void loadingView(View view) {
         mMainBinding.appStatlayout.showLoadingView();
+    }
+
+    /**
+     * 自定义 view
+     *
+     * @param o
+     */
+    private void zidingyi(Object o) {
+        mMainBinding.appStatlayout.showCustomView(view);
     }
 }
