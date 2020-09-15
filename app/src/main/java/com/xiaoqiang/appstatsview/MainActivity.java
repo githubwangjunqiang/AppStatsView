@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.chip_zidyi:
                         zidingyi(null);
                         break;
+                    case R.id.chip_zidyi2:
+                        zidingyi2(null);
+                        break;
                     default:
                         break;
                 }
@@ -124,6 +127,22 @@ public class MainActivity extends AppCompatActivity {
      * @param o
      */
     private void zidingyi(Object o) {
+        mMainBinding.appStatlayout.showCustomView(view);
+    }
+
+    /**
+     * 自定义 view
+     *
+     * @param o
+     */
+    private void zidingyi2(Object o) {
+        View view = new FrameLayout(this);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentView(null);
+            }
+        });
         mMainBinding.appStatlayout.showCustomView(view);
     }
 }
