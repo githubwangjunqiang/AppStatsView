@@ -12,7 +12,8 @@ android {
     sourceSets {
         main {
 //            manifest.srcFile 'src/main/module/AndroidManifest.xml'
-            res.srcDirs = [resDir]
+            // 在主项目中控制
+            res.srcDirs = [rootProject.resDir]
 
 //            if (channel.classesTaskName.endsWith("iMoney")) {
 ////                manifest.srcFile 'src/main/module/AndroidManifest.xml'

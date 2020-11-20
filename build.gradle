@@ -2,9 +2,10 @@ buildscript {
     ext {
         resDirMap = [
                 iMoney: 'src/main/res/res-imoney',
-                quzan : 'src/main/res/res-quzan'
+                quzan : 'src/main/res/res-quzan',
+                gamcame : 'src/main/res/res-gamcame'
         ]
-        resDir = resDirMap.iMoney
+        resDir = resDirMap.gamcame
     }
     repositories {
         google()
