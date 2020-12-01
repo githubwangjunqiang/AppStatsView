@@ -10,7 +10,7 @@
         android:id="@+id/app_state_layout_error_view_ivimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/app_state_view_error" />
+        android:src="@mipmap/app_state_view_emtiy" />
 
     <TextView
         android:id="@+id/app_state_layout_error_view_tvmsg"
@@ -30,7 +30,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="tap the screen to reload"
-        android:textColor="#ff69c1ff"
+        android:textColor="#999999"
         android:textSize="12dp" />
 
 </LinearLayout>

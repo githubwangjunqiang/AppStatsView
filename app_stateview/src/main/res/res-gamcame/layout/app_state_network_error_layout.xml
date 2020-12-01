@@ -10,6 +10,7 @@
         android:id="@+id/app_state_layout_error_view_ivimg"
         android:layout_width="205dp"
         android:layout_height="98dp"
+        android:tint="#DDDEEE"
         android:src="@mipmap/app_state_no_network_icon" />
 
     <TextView
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="tap the screen to reload"
-        android:textColor="#ff69c1ff"
+        android:textColor="#ff999999"
         android:textSize="12dp" />
 
 </LinearLayout>
