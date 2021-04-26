@@ -201,7 +201,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
             LayoutHelper.setOnClickListener(this, mNetWorkErrorView);
             LayoutHelper.setTagHolder(mNetWorkErrorView);
         }
-        LayoutHelper.setData(msg, DEFAULT_DRAWABLE_ID, mNetWorkErrorView);
+        LayoutHelper.setData(msg, drawableId, mNetWorkErrorView);
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mNetWorkErrorView);
         if (mOnStateLayoutChangeListener != null) {
             mOnStateLayoutChangeListener.onChange(isContentView());
@@ -226,7 +226,7 @@ public class StateLayout extends FrameLayout implements IStateLayout {
             LayoutHelper.setOnClickListener(this, mEmptyView);
             LayoutHelper.setTagHolder(mEmptyView);
         }
-        LayoutHelper.setData(msg, DEFAULT_DRAWABLE_ID, mEmptyView);
+        LayoutHelper.setData(msg, drawableId, mEmptyView);
 
         mCurrentView = LayoutHelper.changeViewState(mCurrentView, mEmptyView);
         if (mOnStateLayoutChangeListener != null) {
