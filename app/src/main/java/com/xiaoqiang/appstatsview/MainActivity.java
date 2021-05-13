@@ -1,14 +1,14 @@
 package com.xiaoqiang.appstatsview;
 
-import android.support.design.chip.ChipGroup;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.chip.ChipGroup;
 import com.xiaoqiang.appstateview.OnClickStateListener;
 import com.xiaoqiang.appstateview.OnStateLayoutChangeListener;
-import com.xiaoqiang.appstateview.StateLayout;
 import com.xiaoqiang.appstatsview.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

@@ -8,7 +8,7 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <android.support.design.chip.ChipGroup
+    <com.google.android.material.chip.ChipGroup
         android:id="@+id/chip_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:chipSpacing="10dp"
         app:singleSelection="true">
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_empty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_net_work_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_zidyi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
             app:chipStrokeColor="@color/colorAccent"
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
-        <android.support.design.chip.Chip
+        <com.google.android.material.chip.Chip
             android:id="@+id/chip_zidyi2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
 
-    </android.support.design.chip.ChipGroup>
+    </com.google.android.material.chip.ChipGroup>
 
 
     <com.xiaoqiang.appstateview.StateLayout

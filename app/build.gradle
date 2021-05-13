@@ -20,12 +20,19 @@ android {
         }
     }
     flavorDimensions 'stats'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation project(path: ':app_stateview')
-    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation "androidx.core:core-ktx:+"
+    api "androidx.fragment:fragment-ktx:1.3.3"
+
 
 }

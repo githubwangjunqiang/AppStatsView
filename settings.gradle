@@ -1,4 +1,3 @@
-include ':mylibrarytest'
 include ':app_stateview'
 include ':app'
 rootProject.name = "AppStatsView"
