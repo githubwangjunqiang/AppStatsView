@@ -3,9 +3,10 @@ buildscript {
         resDirMap = [
                 iMoney: 'src/main/res/res-imoney',
                 quzan : 'src/main/res/res-quzan',
-                gamcame : 'src/main/res/res-gamcame'
+                gamcame : 'src/main/res/res-gamcame',
+                gappx : 'src/main/res/res-gappx'
         ]
-        resDir = resDirMap.gamcame
+        resDir = resDirMap.gappx
     }
     repositories {
         google()
