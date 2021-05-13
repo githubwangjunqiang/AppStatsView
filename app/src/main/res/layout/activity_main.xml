@@ -88,6 +88,7 @@
             app:chipStrokeColor="@color/colorAccent"
             app:chipStrokeWidth="1dp"
             app:rippleColor="@color/colorAccent" />
+
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_zidyi2"
             android:layout_width="wrap_content"
